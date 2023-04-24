@@ -1,4 +1,4 @@
-import React, { useState, useMemo, FunctionComponent, MouseEventHandler } from "react";
+import  { useState, useMemo, FunctionComponent, MouseEventHandler } from "react";
 
 export const TabProvider:FunctionComponent<{children:any, tabNames: Array<string>}> = ({ children, tabNames }) => {
   const [selectedTab, setSelectedTab] = useState("0");
