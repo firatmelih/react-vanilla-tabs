@@ -1,8 +1,8 @@
 {
   "name": "react-vanilla-tabs",
-  "version": "1.0.10",
-  "main": "index/index.js",
-  "module": "index/index.js",
+  "version": "1.0.11",
+  "main": "index/index.ts",
+  "module": "index/index.ts",
   "files": [
     "index",
     "README.md"
@@ -26,6 +26,7 @@
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
+    "@tsconfig/recommended": "^1.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -34,7 +35,10 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
+    "@types/react": "^18.0.38",
+    "@types/react-dom": "^18.0.11",
     "react": "^18.0.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "typescript": "^5.0.4"
   }
 }
