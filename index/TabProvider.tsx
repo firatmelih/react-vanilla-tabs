@@ -23,9 +23,11 @@ export const TabProvider:FunctionComponent<{children:any, tabNames: Array<string
           </button>
         ))}
       </div>
+      <div className="TabProvider__Tabs">
       {childs?.map(
         (child: any, index:number) => index.toString() === selectedTab && child
       )}
+      </div>
     </div>
   );
 };

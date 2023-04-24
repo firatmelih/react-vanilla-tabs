@@ -8,9 +8,11 @@ Practical React Tab Library, completely CSS-free, used as less JavaScript as pos
 import { Tab, TabProvider } from 'react-vanilla-tabs';
 
 <TabProvider
-  tabSwitchTitles={
-    ['First Contents Switch Text',
-      'Second Contents Switch Text'
+  tabNames={
+    ['Tab 1',
+      'Tab 2',
+      ...,
+      'Tab n'
     ]
   }
 >
@@ -20,6 +22,9 @@ import { Tab, TabProvider } from 'react-vanilla-tabs';
   <Tab>
     Your Second Content Here
   </Tab>
+  <Tab>
+    Your n Content Here
+  </Tab>
 </TabProvider>
 
 ```
@@ -28,35 +33,47 @@ import { Tab, TabProvider } from 'react-vanilla-tabs';
 
 | Element     |      Prop       |         Type |
 |-------------|:---------------:|-------------:|
-| Index | tabSwitchTitles | string Array |
-| Index | namelessSwitch  |      boolean | 
+| Index | tabNames | string Array |
 
 ### Note:
 
-When namelessSwitch is enabled, tabSwitches which has no title defined will be empty divs.
+
+``` jsx 
+
+// when you code this:
+<TabProvider tabName={['Tab Example']}>
+  <Tab>hello there</Tab>
+</TabProvider>
+// you actually code this, in order to style it use this as base.
+<div className="TabProvider">
+  <div className="TabProvider__Switch">
+    <button data-variant="selected">Tab Example</button>
+  </div>
+  <div className="TabProvider__Tabs">
+    <div className="TabProvider__Tab">hello there</div>
+  </div>
+</div>
+```
+
 
 ```jsx
 import { Tab, TabProvider } from 'react-vanilla-tabs';
-// Tab should have at the least two Index elements
-// Any children without <Tab>tag will be ignored</Tab>
-// tabSwitchTitles prop takes string Array 
-// that string array's index is title of switch that activates index of your <Tab/>
 <TabProvider
   namelessSwitch
-  tabSwitchTitles={
-    ['I will make Melih visible',
-      'I will make Firat visible'
+  tabNames={
+    ['Foo Tab Button',
+      'Bar Tab Button'
     ]
   }
 >
   <Tab>
-    I am Melih
+    Foo Tab Content
   </Tab>
   <Tab>
-    I am Firat
+    Bar Tab Content
   </Tab>
   <Tab>
-    My Tab's switch has no switch title :)
+    Baz Tab Content, has no tab name so it will be replaced with "3"
   </Tab>
 </TabProvider>
 ```

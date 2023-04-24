@@ -1,6 +1,6 @@
 {
-  "name": "react-vanilla-tabs",
-  "version": "1.0.11",
+  "name": "@melihfirat/react-vanilla-tabs-ts",
+  "version": "0.0.0",
   "main": "index/index.ts",
   "module": "index/index.ts",
   "files": [
@@ -40,5 +40,12 @@
     "react": "^18.0.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firatmelih/react-vanilla-tabs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/firatmelih/react-vanilla-tabs/issues"
   }
 }
