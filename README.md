@@ -1,8 +1,17 @@
-# vanilla-react-tabs
+# react-vanilla-tabs (TS)
 
-Practical React Tab Library, completely CSS-free, used as less JavaScript as possible.
+CSS free React Component, solution based and simple.
+Now has Typescript support.
 
 ### how to use:
+
+Simply call TabProvider and inside provider wrap your tabs in Tab tag volala!
+
+Anything in TabProvider without wrapped with Tab will be ignored.
+
+Minimum two Tabs should be defined in order to use package properly.
+
+### Examples:
 
 ```jsx
 import { Tab, TabProvider } from 'react-vanilla-tabs';
@@ -25,15 +34,30 @@ import { Tab, TabProvider } from 'react-vanilla-tabs';
   <Tab>
     Your n Content Here
   </Tab>
+  <div>
+    This will be ignored because it's not wrapped in <Tab> tag.
+  </div>
 </TabProvider>
 
 ```
 
 ###
 
-| Element |   Prop   |         Type |
-| ------- | :------: | -----------: |
-| Index   | tabNames | string Array |
+| Element     |   Prop   |            Type |
+| ----------- | :------: | --------------: |
+| TabProvider | tabNames |    string Array |
+| TabProvider | children | any more than 1 |
+| Tab         |   none   |               - |
+
+```jsx
+import { Tab, TabProvider } from 'react-vanilla-tabs'
+;<TabProvider namelessSwitch tabNames={['Foo Tab Button', 'Bar Tab Button']}>
+  // Baz has no tab name so it will be replaced with "3"
+  <Tab>Foo Tab Content</Tab>
+  <Tab>Bar Tab Content</Tab>
+  <Tab>Baz Tab Content</Tab>
+</TabProvider>
+```
 
 ### Note:
 
@@ -52,14 +76,4 @@ import { Tab, TabProvider } from 'react-vanilla-tabs';
     <div className="TabProvider__Tab">hello there</div>
   </div>
 </div>
-```
-
-```jsx
-import { Tab, TabProvider } from 'react-vanilla-tabs'
-;<TabProvider namelessSwitch tabNames={['Foo Tab Button', 'Bar Tab Button']}>
-  // Baz has no tab name so it will be replaced with "3"
-  <Tab>Foo Tab Content</Tab>
-  <Tab>Bar Tab Content</Tab>
-  <Tab>Baz Tab Content</Tab>
-</TabProvider>
 ```
