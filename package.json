@@ -1,8 +1,8 @@
 {
   "name": "@melihfirat/react-vanilla-tabs-ts",
   "version": "0.0.1",
-  "main": "index/index.ts",
-  "module": "index/index.ts",
+  "main": "index/index.d.ts",
+  "module": "index/index..d.ts",
   "files": [
     "index",
     "README.md"
